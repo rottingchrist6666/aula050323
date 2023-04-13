@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#700"
-    tools:context=".MainActivity">
+    tools:context=".register">
 
 
     <ImageView
@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="30dp"
-          />
+        />
 
     <EditText
         android:id="@+id/userbox"
@@ -47,39 +47,43 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/userbox"
         android:layout_marginTop="20dp" />
+    <EditText
+        android:id="@+id/checkpassword"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:background="#FFF"
+        android:hint="Repeat Password"
+        android:textAlignment="center"
+        android:textColorHint = "@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordbox"
+        android:layout_marginTop="20dp" />
 
     <com.google.android.material.button.MaterialButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="LOGIN"
+        android:text="REGISTER"
         android:id="@+id/botao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordbox"
         android:layout_marginTop="80dp"
         />
-
-    <com.google.android.material.checkbox.MaterialCheckBox
+    <TextView
+        android:id="@+id/backtolog"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:background="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="#FFF"
+        android:textAlignment="center"
+        android:text="Back to login"
+        android:textColorHint = "@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/passwordbox"
-        android:layout_marginTop="20dp"
-        android:text="Lembrar-me?"
-        android:textColor="@color/black"
-        />
-<TextView
-    android:id="@+id/gotoregister"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="Não tem uma conta? Registre-se!"
-    android:background="#FFF"
-    app:layout_constraintStart_toStartOf="@+id/passwordbox"
-    app:layout_constraintEnd_toEndOf="@+id/passwordbox"
-    app:layout_constraintTop_toBottomOf="@id/botao"
-    app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/botao"
+        android:layout_marginTop="20dp" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

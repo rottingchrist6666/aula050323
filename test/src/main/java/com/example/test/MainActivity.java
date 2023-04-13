@@ -1,10 +1,8 @@
-package com.example.aula050323;
+package com.example.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,10 +10,5 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        int gray = Color.GRAY;
-        TextView gotoregister;
-        gotoregister = findViewById(R.id.gotoregister);
-
-
     }
 }
