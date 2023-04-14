@@ -2,6 +2,7 @@ package com.example.aula050323;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -24,7 +25,14 @@ public class register extends AppCompatActivity {
         checkPass = findViewById(R.id.checkpassword);
         rbutton = findViewById(R.id.botao);
         gotologin = findViewById(R.id.backtolog);
-
+        gotologin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent2 = new Intent(getApplicationContext(),MainActivity.class);
+                      startActivity(intent2);
+                      finish();
+            }
+        });
         rbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,7 +40,13 @@ public class register extends AppCompatActivity {
                 email = txtEmail.getText().toString();
                 password = String.valueOf(txtPass.getText());
                 if(TextUtils.isEmpty(email)){
-                    Toast.makeText(this, "no user", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(register.this,"no user",Toast.LENGTH_SHORT).show();
+                }
+                else if(TextUtils.isEmpty(password)){
+                    Toast.makeText(register.this,"no password",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(register.this,"usuario registrado",Toast.LENGTH_SHORT).show();
                 }
             }
         });

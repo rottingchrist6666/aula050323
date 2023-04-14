@@ -12,26 +12,25 @@
         android:id="@+id/imagem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
         android:src="@drawable/baseline_supervised_user_circle_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="30dp"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/userbox"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:hint="User"
+        android:layout_marginTop="-200dp"
         android:background="@color/white"
+        android:hint="User"
         android:textAlignment="center"
-        android:textColorHint ="@color/gray"
+        android:textColorHint="@color/gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imagem"
-        android:layout_marginTop="-200dp"
 
         />
 
@@ -39,51 +38,50 @@
         android:id="@+id/passwordbox"
         android:layout_width="150dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:background="#FFF"
         android:hint="Password"
         android:textAlignment="center"
-        android:textColorHint = "@color/gray"
+        android:textColorHint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userbox"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintTop_toBottomOf="@id/userbox" />
+
     <EditText
         android:id="@+id/checkpassword"
         android:layout_width="150dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:background="#FFF"
         android:hint="Repeat Password"
         android:textAlignment="center"
-        android:textColorHint = "@color/gray"
+        android:textColorHint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordbox"
-        android:layout_marginTop="20dp" />
+        app:layout_constraintTop_toBottomOf="@id/passwordbox" />
 
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/botao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
         android:text="REGISTER"
-        android:id="@+id/botao"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordbox"
-        android:layout_marginTop="80dp"
-        />
+        app:layout_constraintTop_toBottomOf="@id/passwordbox" />
+
     <TextView
         android:id="@+id/backtolog"
         android:layout_width="150dp"
         android:layout_height="48dp"
+        android:layout_marginTop="20dp"
         android:background="#FFF"
-        android:textAlignment="center"
         android:text="Back to login"
-        android:textColorHint = "@color/gray"
+        android:textAlignment="center"
+        android:textColorHint="@color/gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/botao"
-        android:layout_marginTop="20dp" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/botao" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
