@@ -63,7 +63,7 @@ public class register extends AppCompatActivity {
                     Toast.makeText(register.this,"senhas não batem",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    Toast.makeText(register.this,"usuario registrado",Toast.LENGTH_SHORT).show();
+
                     pbar.setVisibility(View.VISIBLE);
                     mAuth.createUserWithEmailAndPassword(email,password)
                          .addOnCompleteListener(register.this, new OnCompleteListener<AuthResult>() {
@@ -71,6 +71,7 @@ public class register extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
+                                    Toast.makeText(register.this,"usuario registrado",Toast.LENGTH_SHORT).show();
                                     Log.d("TAG", "createUserWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
                                     pbar.setVisibility(View.GONE);
