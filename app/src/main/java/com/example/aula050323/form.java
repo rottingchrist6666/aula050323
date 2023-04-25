@@ -1,26 +1,18 @@
 package com.example.aula050323;
 
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
+import androidx.appcompat.app.AppCompatActivity;
 
-import androidx.annotation.Nullable;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
-public class form extends SQLiteOpenHelper {
-    private Context context;
+import com.google.android.material.button.MaterialButton;
 
-    public form(@Nullable Context activity, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(activity, name, factory, version);
-        this.context = activity;
-    }
-
+public class form extends AppCompatActivity {
     @Override
-    public void onCreate(SQLiteDatabase sqLiteDatabase) {
-
-    }
-
-    @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_formulario);
 
     }
 }
