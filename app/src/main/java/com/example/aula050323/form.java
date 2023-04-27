@@ -32,16 +32,18 @@ public class form extends AppCompatActivity {
                 cpf = f2.getText().toString();
                 idade = f3.getText().toString();
                 email = f4.getText().toString();
-                database db = new database(form.this);
 
-                if (nome.isEmpty() || cpf.isEmpty() || idade.isEmpty() || email.isEmpty())
+
+                if (nome.isEmpty() || cpf.isEmpty() || idade.isEmpty() || email.isEmpty()){
                     Toast.makeText(form.this, "cadastro incompleto", Toast.LENGTH_SHORT).show();
             }
                 else {
-
+                database db = new database(form.this);
+                db.addPerson(nome,idade,cpf,email);
 
             }
         });
 
+        }
     }
 }

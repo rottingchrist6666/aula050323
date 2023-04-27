@@ -2,6 +2,7 @@ package com.example.aula050323;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.EditText;
@@ -22,7 +23,7 @@ public class database extends SQLiteOpenHelper {
     private static final String c4 = "Email";
 
 
-    public database(@Nullable Context activity, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
+    public database(@Nullable Context activity) {
         super(activity, TABLE_NAME, null, DATABASE_VERSION);
         this.activity = activity;
     }
@@ -61,4 +62,18 @@ public class database extends SQLiteOpenHelper {
             Toast.makeText(activity, "Success", Toast.LENGTH_SHORT).show();
         }
     }
+
+    Cursor displayAllData() {
+        String query = "SELECT * FROM " + TABLE_NAME;
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        Cursor cursor = null;
+        if (db != null) {
+            cursor = db.rawQuery(query, null);
+        }
+
+        return cursor;
+
+    }
+}
 }
