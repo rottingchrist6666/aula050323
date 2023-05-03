@@ -42,8 +42,8 @@ public class form extends AppCompatActivity {
                 db.addPerson(nome,idade,cpf,email);
 
             }
-        });
-
         }
+
+        });
     }
 }
